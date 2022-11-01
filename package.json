@@ -1,0 +1,14 @@
+{
+  "name": "test-driven-fizzbuzz",
+  "version": "1.0.0",
+  "description": "Project Experimenting with Jest",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}

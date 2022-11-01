@@ -1,0 +1,4 @@
+npx jest --watchAll
+'Rerun test if change detected'
+
+npm run test -- --coverage --coverageReporters=text
