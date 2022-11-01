@@ -21,3 +21,8 @@ Sample Code
 That way when read together, states _'greeting() says hello'_ making output super easy to read.
 
 * * *
+
+When to Source Control?
+-----------------------
+
+Once you have finished a component that passes all your test using the Test Driven Methodology, commit.
