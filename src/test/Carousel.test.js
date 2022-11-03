@@ -4,6 +4,25 @@ import Carousel from '../Carousel';
 import CarouselButton from '../CarouselButton';
 import CarouselSlide from '../CarouselSlide';  
 
+/**
+ * 
+ * NOTE: Testing Stateless Components
+ * MARKUP
+ * 1. Assure top-most component is rendered
+ * 2. Assure children, orderlessly, are rendered
+ * 3. Make sure all props are rendered in their respective component
+ * 
+ * STATE
+ * Stage input values in 1st describe
+ * beforeEach -> pack component to be tested with these values
+ * 
+ * 4. Make sure all INITIAL state values are correct
+ * 5. Each scenario is a describe
+ * 5a. Brainstorm all scenarios your state logic could undergo
+ * 5b. - one describe for mid, start and end index to see if logic can switch slides
+ * 
+ */
+
 describe('Carousel', () => {
     let wrapper;
 
@@ -93,10 +112,4 @@ describe('Carousel', () => {
 
 
 });
-
-//state variables
-//slideIndex
-//Prev btn
-//Next btn
-//slides array
-//Now translate these requirements into test
+7
