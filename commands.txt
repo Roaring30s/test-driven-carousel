@@ -30,9 +30,12 @@ Babel Presets
 **npm install --save-dev react-dom@16.4.2
 **npm install --save-dev eslint-plugin-react@7.11.1
 **npm install --save-dev enzyme@3.8.0 enzyme-adapter-react-16@1.7.1
-
+**npm install prop-types@15.7.2
 configure(new Adapter) - this lets enzyme get the appropriate adapter for the correct 
 React version
-
+**npm install --save-dev babel-eslint@10.0.1
+--allows us to use object rest syntax 
 shallow() returns 
+**npm install --save-dev @babel/plugin-proposal-class-properties@7.1.0
+--OG React not supported so download above package
 

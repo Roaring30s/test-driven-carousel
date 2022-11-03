@@ -3,11 +3,8 @@ module.exports = {
         browser: true,
         node: true
     },
-    parserOptions: {
-        ecmaVersion: 6,
-        sourceType: 'module'
-    },
-    plugins: ['react', 'jest'],
+    parser: 'babel-eslint',
+    plugins: ['react', 'jest', '@babel/plugin-proposal-class-properties'],
     extends: ['eslint:recommended', 'plugin:react/recommended','plugin:jest/recommended'],
     settings: {
         react: {
