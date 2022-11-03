@@ -32,17 +32,17 @@ describe('CarouselSlide', () => {
         const capChild = wrapper.childAt(1).type();
 
         // verify
-        expect(imgChild).toBe('img');
+        expect(imgChild).toBe(CarouselSlide.defaultProps.Img);
         expect(capChild).toBe('figcaption');
     });
 
-    it('passes `imgUrl` through to the <img>', () => {
+    it('passes `imgUrl` through to the props.Img', () => {
         // setup
         const imgUrl = 'https://example.com/image.png';
         wrapper.setProps({imgUrl});
         // `find` returns a shallow-like wrapper
         //  use over childAt() for changing DOM structure
-        const img = wrapper.find('img');
+        const img = wrapper.find(CarouselSlide.defaultProps.Img);
 
         // verify
         expect(img.prop('src')).toBe(imgUrl);
@@ -79,5 +79,24 @@ describe('CarouselSlide', () => {
         expect(propStyle).toBe(style);
         expect(propClick).toBe(onClick);
         expect(propClassName).toBe(className);
+    });
+});
+
+describe('Img', () => {
+    let mounted;
+    const imgUrl = 'https://example.com/default.jpg';
+
+    beforeEach(() => {
+        const Img = CarouselSlide.defaultProps.Img;
+        //mount vs shallow
+        //Shallow test component in isolation
+        //Mount test child components as well
+        mounted = mount(
+            <Img src={imgUrl} imgHeight={500} />
+        );
+    });
+
+    it('renders an <img> with the given src', () => {
+        expect(mounted.containsMatchingElement(<img src={imgUrl} />)).toBe(true);
     });
 });
