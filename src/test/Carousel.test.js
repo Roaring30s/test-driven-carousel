@@ -45,7 +45,7 @@ describe('Carousel', () => {
     ];
     
     beforeEach(() => {
-        wrapper = shallow(<Carousel slides={slides}/>);
+        wrapper = shallow(<Carousel slides={slides} />);
     });
 
     it('render a <div>', () => {

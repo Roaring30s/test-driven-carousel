@@ -81,6 +81,14 @@ describe('CarouselSlide', () => {
         expect(propClick).toBe(onClick);
         expect(propClassName).toBe(className);
     });
+
+    it('renders correctly', () => {
+        wrapper.setProps({
+            description: 'Description',
+            attribution: 'Attribution',
+        });
+        expect(wrapper).toMatchSnapshot();
+    });
 });
 
 describe('Img', () => {

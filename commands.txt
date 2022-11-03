@@ -58,4 +58,7 @@ jest-styled-components@6.3.1​
 **npm​​ ​​install​​ ​​--save-dev​​ ​​jest-styled-components@6.3.3
 --Make assertions in Jest on styled components
 
+**npm install --save-dev enzyme-to-json@3.3.5
+--Allows for jest snapshots
+
 
