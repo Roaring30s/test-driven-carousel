@@ -42,4 +42,14 @@ shallow() returns
 --webpack
 **npm instal --save-dev html-webpack-plugin@3.2.0
 **npm install --save-dev webpack-dev-server@3.1.10
+**npm install --save styled-components@4.1.1
+**npm install --save-dev babel-plugin-styled-components@1.9.2
+--So babel can decode the styled components obfusicated classnames
+
+**npm​​ ​​install​​ ​​--save-dev​​ ​​stylelint@9.9.0​​ 
+​​stylelint-config-styled-components@0.1.1​​ ​
+​stylelint-config-recommended@2.1.0​​ ​
+​stylelint-processor-styled-components@1.5.1​
+
+--Linter for styled components 
 
