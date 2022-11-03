@@ -1,6 +1,7 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import CarouselSlide from '../CarouselSlide';
+import styled from 'styled-components';
 
 /**
  * NOTE: Testing Stateless Components
@@ -99,4 +100,42 @@ describe('Img', () => {
     it('renders an <img> with the given src', () => {
         expect(mounted.containsMatchingElement(<img src={imgUrl} />)).toBe(true);
     });
+
+    it('has the expected static styles', () => {
+        expect(mounted).toHaveStyleRule('width', '100%');
+
+        expect(mounted).toHaveStyleRule('object-fit', 'cover');
+    });
+
+    it('has a height style', () => {
+        const expected = undefined;
+        expect(mounted).toHaveStyleRule('height', '500px');
+        mounted.setProps({ imgHeight: 'calc(100vh - 100px)' });
+        expect(mounted).toHaveStyleRule('height', 'calc(100vh - 100px)');
+    });
+
+    it('allows styles to be overridden', () => {
+        const TestImg = styled(CarouselSlide.defaultProps.Img)`
+            width: auto;
+            height: auto;
+            object-fill: fill;
+        `;
+        mounted = mount(
+            <CarouselSlide
+                Img={TestImg}
+                imgUrl={imgUrl}
+                description="This prop is required"
+            />
+        );
+
+        const mountedImg = mounted.find(TestImg);
+        //Testing static styles is a truism, in the future, test dynamic styles
+        expect(mountedImg).toHaveStyleRule('width', 'auto');
+        expect(mountedImg).toHaveStyleRule('height', 'auto');
+        expect(mountedImg).toHaveStyleRule('object-fill', 'fill');
+
+
+    });
+
+
 });
